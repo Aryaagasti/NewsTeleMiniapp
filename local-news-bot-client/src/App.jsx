@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch('/api/news');
+        const response = await fetch('https://news-tele-miniapp.vercel.app/news');
         if (!response.ok) {
           throw new Error('Failed to fetch news');
         }

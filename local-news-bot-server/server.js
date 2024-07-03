@@ -7,7 +7,7 @@ app.use(express.json())
 
 app.use(cors())
 
-app.get('/api/news', async(req,res)=>{
+app.get('https://news-tele-miniapp.vercel.app/news', async(req,res)=>{
     try {
         const response = await fetch('https://newsapi.org/v2/everything?q=web3&apiKey=d575f5cf1f2c434fb0c2b585f69b04b8')
        const data = await response.json()

@@ -5,7 +5,12 @@ const port = 8000
 
 app.use(express.json())
 
-app.use(cors())
+app.use(cors(corsOptions))
+
+const corsOptions = {
+    origin: 'https://news-tele-miniapp-8ms3.vercel.app/', // Replace with your frontend's URL
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  };
 
 app.get('/api/news', async(req,res)=>{
     try {

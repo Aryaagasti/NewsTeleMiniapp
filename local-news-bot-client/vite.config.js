@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server:{
     proxy: {
-      '/api' : 'https://news-tele-miniapp.vercel.app/'
+      '/api' : 'https://news-tele-miniapp.vercel.app/' //backend
     }
   }
 })
